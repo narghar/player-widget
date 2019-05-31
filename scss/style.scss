@@ -1,7 +1,7 @@
-$player-font: 'Rambla',
-sans-serif;
+///// VARIABLES /////
+$player-font: 'Rambla', sans-serif;
 
-
+///// BASE /////
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +19,7 @@ body {
   background-color: #1e1f26;
 }
 
+///// PLAYER LAYOUT /////
 .player {
 
   background: url(https://res.cloudinary.com/igorwys/image/upload/v1559038484/WidgetPlayer/background_z8a223.jpg) center / cover no-repeat;
@@ -42,7 +43,15 @@ body {
       width: inherit;
       height: 6.5rem;
       background-color: rgba(42, 34, 77, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 2rem;
+      &-wrapper {
+        width: 55%;
+        display: flex;
 
+      }
     }
 
     &-middle {
@@ -74,6 +83,9 @@ body {
       height: 14rem;
       z-index: 100;
       background-color: #eeeff5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &::after {
@@ -103,4 +115,24 @@ body {
   }
 
   &-songTitle {}
+}
+
+///// ICONS /////
+
+.icon-top {
+  fill: #fff;
+  height:  1.6rem;
+  flex: 0 0 10%;
+  margin-left: 2rem;
+  &-menu {
+    opacity: .3;
+    height: 1.4rem;
+  }
+}
+
+
+///// TODO: FORMAT /////
+.icon-bottom {
+  fill: #544282;
+  height: 1.6rem;
 }
