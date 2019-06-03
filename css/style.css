@@ -34,7 +34,7 @@ body {
       justify-content: flex-end;
       padding: 0 2rem; }
       .player-container-top-wrapper {
-        width: 55%;
+        width: 60%;
         display: flex; }
     .player-container-middle {
       color: #fff;
@@ -52,12 +52,15 @@ body {
       bottom: 14rem;
       width: inherit;
       height: .7rem;
-      background-color: #fff; }
+      background-color: #fff;
+      display: flex;
+      z-index: 100; }
     .player-container-bottom {
       position: absolute;
       bottom: 0;
       width: inherit;
       height: 14rem;
+      padding: 0 1.9rem;
       background-color: #eeeff5;
       display: flex;
       justify-content: center;
@@ -98,10 +101,69 @@ body {
       opacity: 1;
       cursor: pointer; }
 
+input[type='range'] {
+  background: linear-gradient(to right, #FFF 0%, #FFF 75%, #ed5e74 75%, #ed5e74 100%);
+  height: .7rem;
+  width: 36rem;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none; }
+
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 2.3rem; }
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: url(../img/audio.png) center/cover;
+  cursor: pointer;
+  height: 2.3rem;
+  width: 2.3rem;
+  border: 0; }
+
+input[type='range']::-moz-range-thumb {
+  background: url(../img/audio.png) center/cover;
+  cursor: pointer;
+  height: 2.3rem;
+  width: 2.3rem;
+  border: 0; }
+
 .icon-bottom {
-  fill: #544282;
-  height: 1.6rem;
-  width: 1.6rem; }
+  border: #60558f solid 1.2rem;
+  background: #60558f;
+  border-radius: 50%;
+  line-height: 0;
+  transition: border-radius .3s; }
+  .icon-bottom:hover {
+    border-radius: 1rem;
+    cursor: pointer; }
+  .icon-bottom-share {
+    border-color: #fff;
+    background: #fff;
+    margin-right: 4.5rem; }
+  .icon-bottom-svgShare {
+    fill: #60558f;
+    height: 1.3rem;
+    width: 1.3rem; }
+  .icon-bottom-svgPrev, .icon-bottom-svgNext {
+    fill: #fff;
+    height: 1.3rem;
+    width: 1.3rem; }
+  .icon-bottom-pause {
+    border-width: 1.7rem;
+    margin: 0 1.7rem; }
+  .icon-bottom-svgPause {
+    fill: #fff;
+    height: 1.7rem;
+    width: 1.7rem; }
+  .icon-bottom-favorite {
+    border-color: #fff;
+    background: #fff;
+    margin-left: 4.5rem; }
+  .icon-bottom-svgFavorite {
+    fill: #ed5e74;
+    height: 1.3rem;
+    width: 1.5rem; }
 
 .rotate {
   transform: rotateY(180.5deg); }
@@ -124,4 +186,5 @@ body {
   transform: rotateY(180deg);
   backface-visibility: hidden;
   background-color: #f3f4f8;
-  border-radius: 30px; }
+  border-radius: 30px;
+  z-index: 200; }

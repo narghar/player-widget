@@ -48,7 +48,7 @@ body {
       justify-content: flex-end;
       padding: 0 2rem;
       &-wrapper {
-        width: 55%;
+        width: 60%;
         display: flex;
 
       }
@@ -73,6 +73,8 @@ body {
       width: inherit;
       height: .7rem;
       background-color: #fff;
+      display: flex;
+      z-index: 100;
     }
 
     &-bottom {
@@ -80,6 +82,7 @@ body {
       bottom: 0;
       width: inherit;
       height: 14rem;
+      padding: 0 1.9rem;
       background-color: #eeeff5;
       display: flex;
       justify-content: center;
@@ -121,7 +124,7 @@ body {
   &-songTitle {}
 }
 
-///// ICONS /////
+///// ICONS TOP /////
 
 .icon-top {
   fill: #fff;
@@ -142,22 +145,97 @@ body {
   }
 }
 
+///// TODO: CLEAR VOLUME RANGE /////
 
-///// TODO: FORMAT /////
-.icon-bottom {
+input[type='range'] {
+  background: linear-gradient(to right, #FFF 0%, #FFF 75%, #ed5e74 75%, #ed5e74 100%);
+  height: .7rem;
+  width: 36rem;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
 
-  fill: #544282;
-  height: 1.6rem;
-  width: 1.6rem;
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 2.3rem;
+}
 
-
-  &-share {
-  }
-
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: url(../img/audio.png) center / cover;
+  cursor: pointer;
+  height: 2.3rem;
+  width: 2.3rem;
+  border: 0;
+}
+input[type='range']::-moz-range-thumb {
+  background: url(../img/audio.png) center / cover;
+  cursor: pointer;
+  height: 2.3rem;
+  width: 2.3rem;
+  border: 0;
 }
 
 
-///// ROTATE  /////
+
+
+/////  ICON BOTTOM /////
+.icon-bottom {
+
+  border: #60558f solid 1.2rem;
+  background: #60558f;
+  border-radius: 50%;
+  line-height: 0;
+  transition: border-radius .3s;
+
+  &:hover {
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  &-share {
+    border-color: #fff;
+    background: #fff;
+    margin-right: 4.5rem;
+  }
+  &-svgShare {
+    fill: #60558f;
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  &-svgPrev,
+  &-svgNext
+   {
+    fill: #fff;
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  &-pause {
+    border-width:  1.7rem;
+    margin: 0 1.7rem;
+  }
+  &-svgPause {
+    fill: #fff;
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+
+  &-favorite {
+    border-color: #fff;
+    background: #fff;
+    margin-left: 4.5rem;
+  }
+  &-svgFavorite
+   {
+    fill: #ed5e74;
+    height: 1.3rem;
+    width: 1.5rem;
+  }
+}
+
+
+///// ROTATE PLAYER /////
 .rotate{
   transform: rotateY(180.5deg);
 }
@@ -181,6 +259,6 @@ body {
     backface-visibility: hidden;
     background-color: #f3f4f8;
     border-radius: 30px;
-
+    z-index: 200;
 }
 
