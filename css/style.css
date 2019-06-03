@@ -96,7 +96,7 @@ body {
     height: 1.4rem;
     flex: 0 0 1.6rem;
     -webkit-backface-visibility: hidden;
-    transition: opacity .3s; }
+    transition: opacity .3s ease-out; }
     .icon-top-menu:hover {
       opacity: 1;
       cursor: pointer; }
