@@ -109,6 +109,7 @@ document.querySelectorAll('.flip').forEach(item => {
 });
 
 /////  VOLUME TRACK /////
+document.getElementById('audio').volume = 0.75;
 document.querySelector('.volume-range').oninput = function () {
    this.style.background = 'linear-gradient(to right, #fff 0%, #fff ' + this.value + '%, #ed5e74 ' + this.value + '%, #ed5e74 100%)';
    document.getElementById('audio').volume = this.value / 100;
