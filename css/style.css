@@ -22,7 +22,8 @@ body {
     border-radius: 30px;
     box-shadow: 0px 6rem 3rem -3rem rgba(0, 0, 0, 0.4), 0px -2rem 1rem -1rem rgba(0, 0, 0, 0.2);
     position: absolute;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: transparent; }
     .player-container-top {
       position: absolute;
       top: 0;
@@ -224,6 +225,11 @@ input[type='range']::-moz-range-thumb {
     width: 31.3rem;
     overflow-y: auto;
     height: 30rem; }
+  @supports (-ms-ime-align: auto) {
+    .playlist-inner {
+      overflow-y: unset; } }
+  .playlist .edge-scroll {
+    overflow-y: auto; }
   .playlist-item {
     border-bottom: 1px solid #d3d5de;
     display: flex;
