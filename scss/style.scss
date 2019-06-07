@@ -101,9 +101,7 @@ body {
     position: relative;
 
 
-    & img {
-      max-width: 100%;
-    }
+
     &::after {
       content: "";
       position: absolute;
@@ -115,6 +113,9 @@ body {
       opacity: 0.26;
 
     }
+  }
+  &-cover {
+    max-width: 100%;
   }
 
   &-artistName {
@@ -272,7 +273,6 @@ input[type='range']::-moz-range-thumb {
     height: 100%;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-
     background-color: #f3f4f8;
     box-shadow: 0px 6rem 3rem -3rem rgba(0, 0, 0, 0.4),
     0px -2rem 1rem -1rem rgba(0, 0, 0, 0.2);
@@ -325,8 +325,7 @@ input[type='range']::-moz-range-thumb {
       margin: 0 auto;
       width: 31.3rem;
       overflow-y: auto;
-
-      height: 30rem;
+      height: 38rem;
 
     }
     //edge glitches fix
@@ -340,19 +339,25 @@ input[type='range']::-moz-range-thumb {
     }
 
     &-item {
-      border-bottom: 1px solid #d3d5de;
+      border-bottom: 1px solid #a0a6c4;
       display: flex;
       align-items: center;
-      padding: 2.4rem 2.4rem 2.4rem 0;
+      justify-content: space-between;
+      padding: 0 0rem 2.4rem 0;
+      margin-right: 2.4rem;
+
+      &:not(:first-child) {
+        padding-top: 2.4rem;
+      }
     }
 
     &-track {
-      flex: 1 1 80%;
       color: #78747f;
       font-size: 1.2rem;
+      cursor: pointer;
     }
 
-    &-track-artist {
+    &-track-title {
       margin-top: .5rem;
       font-size: 16px;
       color: #2f1a4b;
@@ -361,7 +366,7 @@ input[type='range']::-moz-range-thumb {
 
     &-icons {
       width: 1.3rem;
-      flex: 1 1 20%;
+      flex: 0 1 20%;
       display: flex;
       align-items: center;
     }

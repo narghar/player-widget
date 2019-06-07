@@ -71,8 +71,6 @@ body {
     height: 100%;
     width: 100%;
     position: relative; }
-    .player-image img {
-      max-width: 100%; }
     .player-image::after {
       content: "";
       position: absolute;
@@ -82,6 +80,8 @@ body {
       left: 0;
       background-color: #544282;
       opacity: 0.26; }
+  .player-cover {
+    max-width: 100%; }
   .player-artistName {
     font-size: 1.8rem;
     font-weight: 700;
@@ -224,29 +224,33 @@ input[type='range']::-moz-range-thumb {
     margin: 0 auto;
     width: 31.3rem;
     overflow-y: auto;
-    height: 30rem; }
+    height: 38rem; }
   @supports (-ms-ime-align: auto) {
     .playlist-inner {
       overflow-y: unset; } }
   .playlist .edge-scroll {
     overflow-y: auto; }
   .playlist-item {
-    border-bottom: 1px solid #d3d5de;
+    border-bottom: 1px solid #a0a6c4;
     display: flex;
     align-items: center;
-    padding: 2.4rem 2.4rem 2.4rem 0; }
+    justify-content: space-between;
+    padding: 0 0rem 2.4rem 0;
+    margin-right: 2.4rem; }
+    .playlist-item:not(:first-child) {
+      padding-top: 2.4rem; }
   .playlist-track {
-    flex: 1 1 80%;
     color: #78747f;
-    font-size: 1.2rem; }
-  .playlist-track-artist {
+    font-size: 1.2rem;
+    cursor: pointer; }
+  .playlist-track-title {
     margin-top: .5rem;
     font-size: 16px;
     color: #2f1a4b;
     font-weight: 400; }
   .playlist-icons {
     width: 1.3rem;
-    flex: 1 1 20%;
+    flex: 0 1 20%;
     display: flex;
     align-items: center; }
   .playlist-icons-svgShare {
