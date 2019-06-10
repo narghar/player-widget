@@ -25,6 +25,10 @@
 <title>Previous</title>
 <path d="M2.88,6.5l9.62,6v-12zM0.5,0.5v11.98h2.38v-5.98v-6z"></path>
 </symbol>
+<symbol id="icon-play" viewBox="0 0 32 32">
+<title>Play</title>
+<path d="M6 4l20 12-20 12z"></path>
+</symbol>
 <symbol id="icon-pause" viewBox="0 0 17 17">
 <title>Pause</title>
 <path d="M0.5,16.5h5.87v-16h-5.87zM10.63,0.5v16h5.87v-16z"></path>
