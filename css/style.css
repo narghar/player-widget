@@ -8,9 +8,6 @@ html {
   @media only screen and (orientation: portrait) and (max-width: 30em) {
     html {
       font-size: 55%; } }
-  @media only screen and (orientation: landscape) and (max-height: 56em) {
-    html {
-      font-size: 40%; } }
 
 body {
   font-family: 'Rambla', sans-serif;
